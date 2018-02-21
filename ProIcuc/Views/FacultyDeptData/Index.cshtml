@@ -1,0 +1,127 @@
+﻿@model ProIcuc.ViewModels.FacultyDeptData
+
+@{
+    ViewBag.Title = "Departments";
+}
+
+<h2>List of Departments</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Program</th>
+            <th>Faculty Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FacultyDepartment)
+        {
+            string selectedRow = "";
+            if (item.FacultyDepartmentID == ViewBag.FacultyDepartmentID)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.FacultyDepartmentName)
+                </td>
+                <td>
+                    @{
+                        foreach (var program in item.Programs)
+                        {
+                              @program.ProgramName <br />
+                    }
+                    }
+                </td>
+
+                <td>
+                    @if (item.Faculty != null)
+                {
+                        @item.Faculty.Abbrev
+                    }
+                </td>
+                
+
+                <td>
+                    @Html.ActionLink("Select", "Index", new { id = item.FacultyDepartmentID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FacultyDepartmentID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FacultyDepartmentID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FacultyDepartmentID })
+                </td>
+            </tr>
+                        }
+    </tbody>
+</table>
+
+@if (Model.Programs != null)
+{
+    <h3>Programs In The Selected Department</h3>
+    <table class="table">
+        <tr>
+            <th>Program</th>
+            <th>Minimum Credits</th>
+            <th>Department</th>
+        </tr>
+
+        @foreach (var item in Model.Programs)
+        {
+            string selectedRow = "";
+            if (item.ProgramID == ViewBag.ProgramID)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgramName)
+                   </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.mincredit)
+                   </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FacultyDepartmentID)
+                </td>
+                <td>
+                    @Html.ActionLink("Select", "Index", new { programID = item.ProgramID })
+                    @Html.ActionLink("Edit", "Edit", new { programID = item.ProgramID }) |
+                    @Html.ActionLink("Details", "Details", new { programID = item.ProgramID }) |
+                    @Html.ActionLink("Delete", "Delete", new { programID = item.ProgramID })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@if (Model.Courses != null)
+{
+    <h3>
+        Courses in the Selected Program
+    </h3>
+    <table class="table">
+        <tr>
+            <th>Faculty</th>
+            <th>Course Code</th>
+            <th>Credit Units</th>
+        </tr>
+        @foreach (var item in Model.Courses)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditUnits)
+                </td>
+            </tr>
+        }
+    </table>
+}

@@ -1,0 +1,80 @@
+﻿@model ProIcuc.Models.Academics.Program
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Program</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty.FacultyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FacultyDepartment.FacultyDepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacultyDepartment.FacultyDepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mincredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mincredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abbrev)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abbrev)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

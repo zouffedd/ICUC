@@ -1,0 +1,72 @@
+﻿@model ProIcuc.Models.HumanResource.Job
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Job</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowanceScale.AllowanceScaleCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowanceScale.AllowanceScaleCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryScale.SalaryScaleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryScale.SalaryScaleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobAcademicRequirements)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobAcademicRequirements)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequirementDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequirementDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProIcuc.Models.Applications.Preference>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModeOfStudy.ModeOfStudyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Program.ProgramName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Choice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Applicant.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModeOfStudy.ModeOfStudyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Program.ProgramName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Choice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PreferenceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PreferenceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PreferenceId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,351 @@
+﻿@model IEnumerable<ProIcuc.Models.Applicant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountrOfResidence)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nationlt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorHomeAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorPostalAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorPostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorTelNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlevelDocName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamAuthorityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecSchoolNameAndAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecSchoolExaminationYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecSchoolIndexNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODocName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OSchoolNameAndAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OExaminatingYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OIndexNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstitutionNameAndAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualificationObtained)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualificationObtainedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Session)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PositionAndWorkCarriedOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.To)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProffessionalQualificationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateObtained)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngSpeaking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngReading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngWriting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnglishLanguageQualification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngQualificName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngQualificNameDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefereesNameAndAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoUHaveAnyHealthCondition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreUOnRegularMedication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateMedicationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoUNeedAnyMedicalAttention)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdminState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Intake)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountrOfResidence)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nationlt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorHomeAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorPostalAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorPostCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorTelNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlevelDocName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamAuthorityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecSchoolNameAndAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecSchoolExaminationYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecSchoolIndexNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODocName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OSchoolNameAndAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OExaminatingYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OIndexNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstitutionNameAndAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualificationObtained)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualificationObtainedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Session)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PositionAndWorkCarriedOut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.From)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.To)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProffessionalQualificationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateObtained)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngSpeaking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngReading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngWriting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnglishLanguageQualification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngQualificName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngQualificNameDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefereesNameAndAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoUHaveAnyHealthCondition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreUOnRegularMedication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateMedicationType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoUNeedAnyMedicalAttention)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdminState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Intake)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ApplicantID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ApplicantID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ApplicantID })
+        </td>
+    </tr>
+}
+
+</table>

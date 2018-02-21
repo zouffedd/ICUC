@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProIcuc.Models.Examination.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacultyDepartment.FacultyDepartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModeOfStudy.PreferenceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Program.ProgramName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacultyID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Applicant.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacultyDepartment.FacultyDepartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModeOfStudy.PreferenceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Program.ProgramName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacultyID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
+        </td>
+    </tr>
+}
+
+</table>

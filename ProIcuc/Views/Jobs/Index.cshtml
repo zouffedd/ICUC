@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProIcuc.Models.HumanResource.Job>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowanceScale.AllowanceScaleCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryScale.SalaryScaleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobAcademicRequirements)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequirementDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowanceScale.AllowanceScaleCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalaryScale.SalaryScaleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobAcademicRequirements)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequirementDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JobID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JobID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JobID })
+        </td>
+    </tr>
+}
+
+</table>

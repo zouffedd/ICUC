@@ -1,0 +1,74 @@
+﻿@model ProIcuc.Models.Applications.AlevelSubject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AlevelSubject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlevelSubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlevelSubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaperNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaperNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlevelSubjectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

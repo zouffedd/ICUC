@@ -1,0 +1,34 @@
+﻿@model ProIcuc.Models.Academics.FacultyDepartment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FacultyDepartment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty.FacultyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FacultyDepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacultyDepartmentName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FacultyDepartmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

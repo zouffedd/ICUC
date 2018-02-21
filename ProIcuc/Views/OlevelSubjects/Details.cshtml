@@ -1,0 +1,50 @@
+﻿@model ProIcuc.Models.Applications.OlevelSubject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OlevelSubject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Applicant
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.ApplicantName)
+        </dd>
+
+        <dt>
+            Document
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OlevelDoc.DocName)
+        </dd>
+
+        <dt>
+            Subject Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OlevelSubjectName)
+        </dd>
+
+        <dt>
+            Grade
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grading)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OlevelSubjectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

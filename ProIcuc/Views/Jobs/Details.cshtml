@@ -1,0 +1,66 @@
+﻿@model ProIcuc.Models.HumanResource.Job
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Job</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowanceScale.AllowanceScaleCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowanceScale.AllowanceScaleCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryScale.SalaryScaleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryScale.SalaryScaleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobAcademicRequirements)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobAcademicRequirements)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequirementDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequirementDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JobID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

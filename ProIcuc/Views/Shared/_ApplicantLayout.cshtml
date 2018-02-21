@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Islamic Call University College</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <nav>
+        <div class="navbar navbar-fixed">
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="navbar-nav navbar-right">
+                        <li>
+                            <a href="@Url.Action("Index","Home")"><img alt="Home" id="iu_logo" src="~/Content/Images/ICUC Logoo copynn.png" class=" img-responsive center-block" /></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li>
+                    <li>@Html.ActionLink("Applicant", "Index", "Applicants")</li>
+                    <ul class="navbar-nav navbar-right">
+                        @*<li>@Html.ActionLink("Applicant", "Index", "Applicants")</li>*@
+                        @*<li>@Html.ActionLink("O Level Document", "Index", "OlevelDocs")</li>
+            <li>@Html.ActionLink("O Level Subjects", "Index", "OlevelSubjects")</li>
+            <li>@Html.ActionLink("A Level Document", "Index", "AlevelDocs")</li>
+            <li>@Html.ActionLink("A level Subjects", "Index", "AlevelSubjects")</li>
+            <li>@Html.ActionLink("Other Documents", "Index", "OtherDocs")</li>
+            <li>@Html.ActionLink("Proffessional Qualifications", "Index", "ProffessionalQualifications")</li>
+            <li>@Html.ActionLink("Former Employment", "Index", "FormerEmployments")</li>
+            <li>@Html.ActionLink("Preference", "Index", "Preferences")</li>*@
+                    </ul>
+                    </li>
+                    
+                    <li>
+                    <li>@Html.ActionLink("Addresses", "Index", "Addresses")</li>
+
+
+                   
+                    <ul class="navbar-nav navbar-right">
+
+                        <li>
+                            <a href="/">Documents</a>
+
+                            <ul class="navbar-nav navbar-right">
+                                <li>@Html.ActionLink("O Level Document", "Index", "OlevelDocs")</li>
+                                <li>@Html.ActionLink("A Level Document", "Index", "AlevelDocs")</li>
+                                <li>@Html.ActionLink("Other Documents", "Index", "OtherDocs")</li>
+                                <li>@Html.ActionLink("Proffessional Qualifications", "Index", "ProffessionalQualifications")</li>
+                                <li>@Html.ActionLink("Former Employment", "Index", "FormerEmployments")</li>
+                            </ul>
+                        </li>
+
+
+                        <ul class="navbar-nav navbar-right">
+                            <li>
+                            <li>@Html.ActionLink("Preference", "Index", "Preferences")</li>i>
+                            <ul class="navbar-nav navbar-right">
+                         </ul>
+                        </ul>
+                       </div>
+                      </div>
+                     </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Islamic Call University College</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+

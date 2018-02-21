@@ -1,0 +1,90 @@
+﻿@model ProIcuc.Models.Examination.Result
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AcademicYear.AcademicYearName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AcademicYear.AcademicYearName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment.CommentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment.CommentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Semester.Sem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semester.Sem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearOfStudy.StudyYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearOfStudy.StudyYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseWorkMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseWorkMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamMark)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResultID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

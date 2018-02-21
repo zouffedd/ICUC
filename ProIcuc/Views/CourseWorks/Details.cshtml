@@ -1,0 +1,114 @@
+﻿@model ProIcuc.Models.Examination.CourseWork
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CourseWork</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assignment1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assignment1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutOfAs1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutOfAs1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assignment2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assignment2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutOfAs2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutOfAs2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assignment3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assignment3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutOfAs3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutOfAs3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutOfTs1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutOfTs1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutOfTs2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutOfTs2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseWorkRatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseWorkRatio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseWorkID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

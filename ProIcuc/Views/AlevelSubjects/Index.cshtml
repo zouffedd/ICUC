@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProIcuc.Models.Applications.AlevelSubject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Applicant.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlevelSubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Score)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Applicant.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlevelSubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectGrade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaperGrade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaperType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaperNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Score)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlevelSubjectID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlevelSubjectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlevelSubjectID })
+        </td>
+    </tr>
+}
+
+</table>

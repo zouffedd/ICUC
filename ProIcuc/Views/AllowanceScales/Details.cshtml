@@ -1,0 +1,58 @@
+﻿@model ProIcuc.Models.AllowanceScale
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AllowanceScale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowanceScaleCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowanceScaleCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HousingAllowance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HousingAllowance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelAllowance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelAllowance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Airtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airtime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AllowanceScaleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

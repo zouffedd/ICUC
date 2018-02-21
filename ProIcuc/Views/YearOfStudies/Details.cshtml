@@ -1,0 +1,26 @@
+﻿@model ProIcuc.Models.Examination.YearOfStudy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>YearOfStudy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudyYear)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.YearOfStudyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

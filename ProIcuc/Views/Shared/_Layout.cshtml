@@ -3,37 +3,149 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Islamic Call University College</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+    <nav>
+        <div class="navbar navbar-fixed">
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="navbar-nav navbar-right">
+                        <li>
+                            <a href="@Url.Action("Index","Home")"><img alt="Home" id="iu_logo" src="~/Content/Images/ICUC Logoo copynn.png" class=" img-responsive center-block" /></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Student Applicants</a>
+                        <ul class="navbar-nav navbar-right">
+                            <li>@Html.ActionLink("Applicant", "Index", "Applicants")</li>
+                            <li>@Html.ActionLink("O Level Document", "Index", "OlevelDocs")</li>
+                            <li>@Html.ActionLink("O Level Subjects", "Index", "OlevelSubjects")</li>
+                            <li>@Html.ActionLink("A Level Document", "Index", "AlevelDocs")</li>
+                            <li>@Html.ActionLink("A level Subjects", "Index", "AlevelSubjects")</li>
+                            <li>@Html.ActionLink("Other Documents", "Index", "OtherDocs")</li>
+                            <li>@Html.ActionLink("Proffessional Qualifications", "Index", "ProffessionalQualifications")</li>
+                            <li>@Html.ActionLink("Former Employment", "Index", "FormerEmployments")</li>
+                            <li>@Html.ActionLink("Preference", "Index", "Preferences")</li>
+                        </ul>
+                    </li>
+                    <li>
+                    <li>@Html.ActionLink("Applicant", "Index", "Applicants")</li>
+                    <ul class="navbar-nav navbar-right"></ul>
+                    </li>
+                    <li>
+                        <a href="/services/">Services</a>
+                        <ul class="navbar-nav navbar-right">
+                            <li>
+                                <a href="/">Design</a>
+                            </li>
+                            <li>
+                                <a href="/">Marketing</a>
+                            </li>
+                            <li>
+                                <a href="/">Programming</a>
+                            </li>
+                            <li>
+                                <a href="/">Sales</a>
+                            </li>
+                            <li>
+                                <a href="/">Support</a>
+                            </li>
+                            <li>
+                                <a href="/">Training</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/resources/">Resources</a>
+                        <ul class="navbar-nav navbar-right"></ul>
+                    </li>
+                    <li>
+                        <a href="/">Contact Us</a>
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
+    </nav>
+
+    @*<div class="nav">
+            <div class="nav-header">
+                <div class="nav-title">
+                    JoGeek
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <input type="checkbox" id="nav-check">
+            <div class="nav-links">
+                <a href="//github.io/jo_geek" target="_blank">Github</a>
+                <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+                <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+                <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
+                <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+            </div>
+        </div>*@
+    @*<div class="dropdown">
+            <button class="dropbtn"><span>Applications</span></button>
+            <div class="dropdown-content">
+
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Applicant", "Index", "Applicants")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Address", "Index", "Addresses")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Correspondence Address", "Index", "CorrespondenceAddresses")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("O Level Document", "Index", "OlevelDocs")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("O Level Subjects", "Index", "OlevelSubjects")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("A Level Document", "Index", "AlevelDocs")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("A level Subjects", "Index", "AlevelSubjects")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Other Documents", "Index", "OtherDocs")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Proffessional Qualifications", "Index", "ProffessionalQualifications")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Former Employment", "Index", "FormerEmployments")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Preference", "Index", "Preferences")</li>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button class="dropbtn"><span>Academics</span></button>
+            <div class="dropdown-content">
+                <a  style="background-color:darkseagreen;" href="@Url.Action("Index","Faculties")">Faculties</a>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Faculties", "Index", "Faculties")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Programs", "Index", "Programs")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Programs And Courses", "Index", "ProgCourses")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Courses", "Index", "Courses")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Departments", "Index", "Depts")</li>
+
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Academic year", "Index", "AcademicYears")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Year Of Study", "Index", "YearOfStudies")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Results", "Index", "Results")</li>
+                <li style="background-color:darkseagreen;">@Html.ActionLink("Semesters", "Index", "Semesters")</li>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><span>Help</span></button>
+            <div class="dropdown-content">
+                <a  style="background-color:darkseagreen;" href="@Url.Action("Index","Faculties")">Faculties</a>
+                <li style="background-color:darkseagreen;font-family:'Franklin Gothic'">@Html.ActionLink("About", "About", "Home")</li>
+                <li style="background-color:darkseagreen;font-family:'Franklin Gothic'">@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </div>
+        </div>*@
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Islamic Call University College</p>
         </footer>
     </div>
 
@@ -42,3 +154,6 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+

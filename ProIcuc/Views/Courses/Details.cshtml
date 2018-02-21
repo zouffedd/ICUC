@@ -1,0 +1,66 @@
+﻿@model ProIcuc.Models.Academics.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Program.ProgramName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Program.ProgramName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PracticalHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PracticalHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LectureHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LectureHours)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

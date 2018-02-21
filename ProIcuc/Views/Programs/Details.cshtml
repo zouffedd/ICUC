@@ -1,0 +1,74 @@
+﻿@model ProIcuc.Models.Academics.Program
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Program</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty.FacultyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FacultyDepartment.FacultyDepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacultyDepartment.FacultyDepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mincredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mincredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.abbrev)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.abbrev)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProgramID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

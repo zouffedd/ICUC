@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ProIcuc.Models.Examination.CourseWork>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assignment1)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.OutOfAs1)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Assignment2)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Assignment3)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Test1)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Test2)
+        </th>
+       
+        @*<th>
+            @Html.DisplayNameFor(model => model.CourseWorkRatio)
+        </th>*@
+        <th>CourseWork Final Mark</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment1) | @Html.DisplayFor(modelItem => item.OutOfAs1)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OutOfAs1)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment2)| @Html.DisplayFor(modelItem => item.OutOfAs2)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OutOfAs2)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Assignment3)| @Html.DisplayFor(modelItem => item.OutOfAs3)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OutOfAs3)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Test1)| @Html.DisplayFor(modelItem => item.OutOfTs1)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OutOfTs1)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Test2)|@Html.DisplayFor(modelItem => item.OutOfTs2)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.CWFinalMark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CourseWorkID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CourseWorkID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CourseWorkID })
+        </td>
+    </tr>
+}
+
+</table>
